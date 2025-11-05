@@ -1,1 +1,1 @@
-# Angela Yu's Course
+# 100 Days of Code Challenge
