@@ -1,13 +1,8 @@
+# PROJECT: ROCK PAPER SCISSORS
+
 import random
 
-print(r'''
- __      __   _                    _____      ___         _     ___                      ___     _                      ___                
- \ \    / /__| |__ ___ _ __  ___  |_   _|__  | _ \___  __| |__ | _ \__ _ _ __  ___ _ _  / __| __(_)______ ___ _ _ ___  / __|__ _ _ __  ___ 
-  \ \/\/ / -_) / _/ _ \ '  \/ -_)   | |/ _ \ |   / _ \/ _| / / |  _/ _` | '_ \/ -_) '_| \__ \/ _| (_-<_-</ _ \ '_(_-< | (_ / _` | '  \/ -_)
-   \_/\_/\___|_\__\___/_|_|_\___|   |_|\___/ |_|_\___/\__|_\_\ |_| \__,_| .__/\___|_|   |___/\__|_/__/__/\___/_| /__/  \___\__,_|_|_|_\___|
-                                                                        |_|                                                                
-''')
-
+print("Welcom to the Rock Paper Scissors Game!")
 print("[A] The outcome of the game is determined by 3 simple rules:")
 print("\t1. \"Rock\" wins against \"Scissors\"")
 print("\t2. \"Scissors\" wins against \"Paper\"")
@@ -44,33 +39,34 @@ scissors = '''
 user_choice = int(input("\nWhat do you choose?\n"))
 
 if user_choice > 2 or user_choice < 0:
-  print()
-  print("You Entered Invalid Choice. Game Over!")
+    print()
+    print("You Entered Invalid Choice. Game Over!")
 else:
-  print()
-  image = [rock, paper, scissors]
+    print()
+    image = [rock, paper, scissors]
 
-  computer_choice = random.randint(0, 2)
+    computer_choice = random.randint(0, 2)
 
-  if user_choice == 0 and computer_choice == 2:
-    print(f"Your's Choice:\n{image[user_choice]}")
-    print(f"Computer's Choice:\n{image[computer_choice]}")
-    print("You Won!")
-  elif user_choice == 2 and computer_choice == 0:
-    print(f"Your's Choice:\n{image[user_choice]}")
-    print(f"Computer's Choice:\n{image[computer_choice]}")
-    print("You Lose!")
-  elif user_choice > computer_choice:
-    print(f"Your's Choice:\n{image[user_choice]}")
-    print(f"Computer's Choice:\n{image[computer_choice]}")
-    print("You Won!")
-  elif user_choice < computer_choice:
-    print(f"Your's Choice:\n{image[user_choice]}")
-    print(f"Computer's Choice:\n{image[computer_choice]}")
-    print("You Lose!")
-  elif user_choice == computer_choice:
-    print(f"Your's Choice:\n{image[user_choice]}")
-    print(f"Computer's Choice:\n{image[computer_choice]}")
-    print("It's a Draw!")
-  
-  print("\n\tTHANK YOU FOR PLAYING!")
+    # Deciding winner based on choice
+    if user_choice == 0 and computer_choice == 2:
+        print(f"Your's Choice:\n{image[user_choice]}")
+        print(f"Computer's Choice:\n{image[computer_choice]}")
+        print("You Won!")
+    elif user_choice == 2 and computer_choice == 0:
+        print(f"Your's Choice:\n{image[user_choice]}")
+        print(f"Computer's Choice:\n{image[computer_choice]}")
+        print("You Lose!")
+    elif user_choice > computer_choice:
+        print(f"Your's Choice:\n{image[user_choice]}")
+        print(f"Computer's Choice:\n{image[computer_choice]}")
+        print("You Won!")
+    elif user_choice < computer_choice:
+        print(f"Your's Choice:\n{image[user_choice]}")
+        print(f"Computer's Choice:\n{image[computer_choice]}")
+        print("You Lose!")
+    elif user_choice == computer_choice:
+        print(f"Your's Choice:\n{image[user_choice]}")
+        print(f"Computer's Choice:\n{image[computer_choice]}")
+        print("It's a Draw!")
+
+    print("\n\tTHANK YOU FOR PLAYING!")
